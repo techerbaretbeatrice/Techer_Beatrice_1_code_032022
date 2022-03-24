@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import "./normalize.scss";
+
+
+$primary-color: #9356DC ;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$box-color: #f5f5f5;
+$wight: #ffffff;
+
+body{
+    width: 100%;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+header{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    background-color: $wight;
+    .header__img{
+        width: 82%;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+        .header__logo{
+            width: 160px;
+            height: 23px;
+    }
+    .header__redirection{
+        width: 18%;
+        max-width: 60px;
+        height: 65px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+            .redirection__btn{
+                color:black;    
+            }
+
+    }
+    &.header__box{
+        justify-content: flex-start;
+    }
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+}
+
+@media screen  and (min-width : 768px) and (max-width : 1024px){
+
+}
+
+@media screen and (min-width : 1024px){
+    header{
+        justify-content: left;
+        padding-left: 50px;
+    }
+
+
+}
