@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -341,10 +340,21 @@ template {
 
 body {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
 }
 
 header {
@@ -387,12 +397,236 @@ header.header__box {
 .container {
   width: 100%;
   max-width: 1440px;
+  height: auto;
+}
+.container .container__map {
+  width: 100%;
+  max-width: 1440px;
+  height: 45px;
+  background-color: #EBEBEB;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container .container__map .map__location--setting {
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.container .map--box {
+  box-shadow: inset 0px 2px 4px 0px #b6b6b6;
+}
+.container .container__info {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: normal;
+  font-family: "roboto", sans-serif;
+  padding: 42px;
+}
+.container .container__info .info__description {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container__info .description--setting {
+  margin-top: 30px;
+}
+.container .container__info .description--setting-margin {
+  margin-top: 0px;
+}
+.container .container__info .info--setting {
+  font-size: 24px;
+}
+.container .container__info .info__btn {
+  width: 220px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #ffffff;
+  -webkit-box-shadow: 2px 5px 16px 0px #b6b6b6, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 2px 5px 16px 0px #b6b6b6, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  margin-top: 30px;
+}
+.container .container__operations {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container .container__operations .info--setting {
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.container .container__operations .operation__stages {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container .container__operations .operation__stages .operation__stage {
+  min-width: 337px;
+  width: 100%;
+  height: 78px;
+  background-color: #f5f5f5;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: visible;
+  box-shadow: 0px 2px 10px 0px #d1d1d1;
+}
+.container .container__operations .operation__stages .operation__stage .stage__order .order__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 25px;
+  background-color: #9356DC;
+  font-family: "roboto", sans-serif;
+  color: #ffffff;
+  overflow: visible;
+  margin-left: -10px;
+}
+.container .container__operations .operation__stages .operation__stage .stage__icon {
+  padding-left: 25px;
+  padding-right: 30px;
+}
+.container .container__operations .operation__stages .operation__stage .stage__text {
+  width: 180px;
+}
+.container .container__catalog {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  font-family: "roboto", sans-serif;
+  padding-top: 55px;
+  padding-bottom: 50px;
+}
+.container .container__catalog .info--setting {
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.container .container__catalog .card__container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .container__catalog .card__container .card {
+  display: flex;
+  flex-direction: column;
+  width: 334px;
+  height: 250px;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 10px 0px #d1d1d1;
+}
+.container .container__catalog .card__container .card .card__img {
+  min-width: 100%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 25px 25px 0px 0px;
+}
+.container .container__catalog .card__container .card .card__img img {
+  object-fit: cover;
+  width: 100%;
 }
 
+footer {
+  width: 100%;
+  max-width: 1440px;
+  height: 195px;
+  background-color: #000000;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container .card__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 1024px) {
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   header {
     justify-content: left;
+  }
+
+  .container .map--box {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 30%;
+  }
+  .container .map--box .map--setting {
     padding-left: 50px;
+  }
+  .container .container__info {
+    background-color: #ffffff;
+    padding: 0px;
+    margin-top: 40px;
+    align-items: flex-start;
+    height: auto;
+  }
+  .container .container__info .info__description {
+    flex-direction: row;
+  }
+  .container .container__info .info__description .description--setting-margin {
+    margin-top: 30px;
+    margin-left: 4px;
+  }
+  .container .container__info .info__description .info--setting {
+    margin-right: 4px;
+  }
+  .container .container__operations {
+    height: auto;
+  }
+  .container .container__operations .operation__stages {
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-content: space-between;
+  }
+  .container .container__operations .operation__stages .operation__stage {
+    width: 380px;
+  }
+  .container .container__catalog {
+    margin-bottom: 30px;
+  }
+  .container .container__catalog .card__container .card {
+    margin-right: 0px;
   }
 }
 
