@@ -66,7 +66,6 @@ header{
             .redirection__btn{
                 color:black;    
             }
-
     }
   
 }
@@ -75,6 +74,7 @@ header{
     width: 100%;
     max-width: 1440px;
     height: auto;
+    min-width: 375px;
     .container__map{
         width: 100%;
         max-width: 1440px;
@@ -82,17 +82,29 @@ header{
         background-color: #EBEBEB;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
             .map__location--setting{
                 font-family: $font-text;
                 font-size: 14px;
-                padding-right: 20px;
-                padding-left: 20px;
-            }       
+                margin-right: 15px;
+                margin-left: 15px;
+                border: none;
+                background-color:  #EBEBEB;
+                height: 35px;
+                width: 58%;   
+            }
+            .map--setting{
+                color: grey;
+                height: 45px;
+                padding-top: 12px;
+            } 
+                 
     }
     .map--box{
-        box-shadow: inset 0px 2px 4px 0px #b6b6b6,
+        box-shadow: inset 0px 2px 4px 0px #b6b6b6;
+        width: 100%;
+
     }
     
     .container__info{
@@ -103,32 +115,26 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: normal;
+        justify-content: center;
         font-family: $font-text;
-        padding: 42px;
+        padding: 45px;
 
         .info__description{
             font-size: 16px;
             display: flex; 
-            flex-direction: column; 
-            align-items: center;  
+            flex-direction: row; 
+            justify-content: center; 
+            text-align: center;
+            .description--setting{
+                margin-top: 23px;
+                display: flex; 
+            }
+            .info--setting{
+                font-size: 24px;
+                width: auto;
+            }
         }
 
-        .description--setting{
-            margin-top: 30px;  
-        }
-
-        .description--setting-margin{
-            margin-top: 0px;
-        }
-
-       
-
-        .info--setting{
-            font-size: 24px;
-        }
-        
-    
         .info__btn{
             width: 220px;
             height: 50px;
@@ -142,6 +148,7 @@ header{
             box-shadow: 2px 5px 16px 0px #b6b6b6, 5px 5px 15px 5px rgba(0,0,0,0);
             background: linear-gradient(to bottom right,#FF79DA, #9356DC) ;
             margin-top: 30px;
+            margin-bottom: 5px;
         
         }
     }
@@ -205,8 +212,7 @@ header{
                 }
                 .stage__text{
                     width: 180px;
-                }
-               
+                }   
             }
         }
     }
@@ -240,12 +246,28 @@ header{
             min-width: 334px;
             height: 250px;
             width: 100%;
-            background-color:white;
             margin-left: 20px;
             margin-top: 20px;
             margin-right: 20px;
             border-radius: 25px;
             box-shadow: 0px 2px  10px 0px #d1d1d1;
+            position: relative;
+            text-decoration: none;
+            color: $black;
+                .tag{
+                    width: 80px;
+                    height: 30px;
+                    background-color: $tertiary-color;
+                    right: 20px;
+                    position: absolute;
+                    margin-top: 19px;
+                    color: olivedrab;
+                    text-align: center;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                }
+               
                 .card__img{
                     min-width: 100%;
                     height: 70%;
@@ -254,13 +276,34 @@ header{
                     img{
                         object-fit: cover;
                         width: 100%;
-
+                        object-position: 0px -50px;
+                        &.img--setting{
+                            object-position: 0px -150px;
+                        }
                     }
-                    .img__elt{
-                        width: 80px;
-                        height: 30px;
-                        background-color: $tertiary-color;
-
+                }
+                .card__description{
+                    height: 30%;
+                    display: flex;
+                    flex-direction: row;
+                    .description__text{
+                        display: flex;
+                        flex-direction: column;
+                        width: 80%;
+                        .text--margin{
+                            margin-bottom: 5px;
+                            margin-left: 20px;
+                        }
+                        .title--margin{
+                           margin-top: 12px; 
+                        }
+                    }
+                    .description__preference{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20%;
+                        font-size: 30px;
                     }
                 }
             }
@@ -285,7 +328,6 @@ footer{
          margin-bottom: 22px;
          font-family: 'Shrikhand', cursive;
          font-size: 14px;
-    
         }
         .footer__items{
             font-family: 'Roboto', sans-serif;
@@ -303,8 +345,6 @@ footer{
                 .footer__icon{
                     margin-right: 12px;
                 }
-
-
             }
         }
     }
@@ -312,9 +352,15 @@ footer{
 
 @media screen  and (min-width : 768px) and (max-width : 1024px){
     .container{
+        .container__map{
+            padding-left: 80px;
+            justify-content: center;
+            .map__location--setting{
+                width: 25%;
+            }
+        }
         .container__info{
             background-color: $box-color;
-            padding: 0px;
             padding-top: 40px;
             padding-bottom: 40px;
             align-items: center;
@@ -322,23 +368,14 @@ footer{
            
             .info__description{
                 flex-direction: row;
-                .description--setting-margin{
-                   margin-top: 30px;
-                   margin-left: 4px;
-                }
                 .info--setting{
                     margin-right: 4px;
-                }
-            }
-           
+                    width: auto;
+                }    
+            }  
         }
         .container__operations{
             height: auto;
-            margin-left: 15px;
-            
-            .info--setting{
-                margin-left: 0px;
-            }
             .operation__stages{
                 padding-left: 0px;
                 padding-right: 0px;
@@ -358,6 +395,7 @@ footer{
                 .card{
                     margin-right: 20px;
                     width: 350px;
+                   
                 }
             }
         }
@@ -369,8 +407,6 @@ footer{
                 .footer__item{
                     margin-right: 50px;
                 }
-                
-
             }
         }
     }
@@ -379,7 +415,12 @@ footer{
 @media screen and (min-width : 1024px){
    
     header{
-        justify-content: right;
+        justify-content: flex-end;
+        margin-right: 100px;
+        .header__box{
+            width: 100%;
+            max-width: 1440px;
+        }
     }
 
     .container{
@@ -387,12 +428,15 @@ footer{
             display: flex;
             flex-direction: row;
             justify-content: left;
-            width: 30%;
+            width: 350px;
             margin-left: 15px;
             margin-top: 20px;
-            box-shadow: 0px 2px  10px 0px #d1d1d1;;
+            box-shadow: 0px 2px  5px 0px #d1d1d1;;
             .map--setting{
-                padding-left: 50px;
+                padding-left: 30px;
+            }
+            .map__location--setting{
+                width: 250px;
             }
         }
         .container__info{
@@ -404,16 +448,14 @@ footer{
             margin-left: 15px;
 
             .info__description{
-                flex-direction: row;
-                .description--setting-margin{
-                   margin-top: 30px;
-                   margin-left: 4px;
+                .description--setting{
+                    margin-top: 15px;
                 }
                 .info--setting{
                     margin-right: 4px;
+                    width: auto;
                 }
-            }
-           
+            }  
         }
         .container__operations{
             height: auto;
@@ -445,8 +487,7 @@ footer{
                     width: 334px;
                 }
             }
-        }
-        
+        }   
     }
     footer{
         width: 100%;
@@ -456,7 +497,7 @@ footer{
             .footer__items{
                 flex-direction: row;
                 .footer__item{
-                    margin-right: 200px;
+                    margin-right: 150px;
                 }
             }
         }
