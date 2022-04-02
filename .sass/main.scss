@@ -355,6 +355,9 @@ header{
             justify-content: space-around;
             align-items: center;
             font-weight: 200;
+            .menu__preference{
+                font-size: 20px;
+            }
         }
         .block__list{
             .block__entries{
@@ -374,11 +377,43 @@ header{
                     padding-bottom: 45px;
                     .list__entry{
                         width: 350px;
-                        height: 72px;
+                        height: auto;
                         background-color: $wight;
                         box-shadow: 0px 2px  10px 0px #d1d1d1;
                         margin-top: 15px;
-                        border-radius: 25px 25px 25px 25px;
+                        border-radius: 15px 15px 15px 15px;
+                        display: flex;
+                        flex-direction: row;
+                        .entry__description{
+                            display: flex;
+                            flex-direction: column;
+                            width: 80%;
+                            .text__setting{
+                                font-size: 18px;
+                                font-weight: 500;
+                                margin-bottom: 5px;
+                                margin-left: 15px;
+                                margin-top: 15px;
+                            }
+                            .quote__setting{
+                              margin-left: 15px;
+                              font-size: 15px;
+                              font-weight: 300;
+                              margin-bottom: 15px;
+                              text-overflow: ellipsis '';  
+                              
+                            }
+                           
+                          
+                        }
+                        .entry__price{
+                            width: 20%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            margin-bottom: 15px;
+
+                        }
                     }
                
                 }
@@ -629,7 +664,8 @@ footer{
                     .list__entries{
                         padding-bottom: 25px;
                         .list__entry{
-                            width: 320px;
+                            width: 340px;
+                            
                         }
                     }
                 }    
