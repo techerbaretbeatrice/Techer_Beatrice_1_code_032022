@@ -10,12 +10,7 @@ $wight: #ffffff;
 $black: #000000;
 $font-text: 'roboto', sans-serif;
 
-body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 
 * {
@@ -28,6 +23,68 @@ h1 {
 p{
     margin: 0px;
 }
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .loader__container{
+        width: 100%;
+        height: 100%;
+        background-color: $wight;
+        animation-name: preloader;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+        position: fixed;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #9356DC ; /* Blue */
+            border-radius: 50%;
+            animation: spin 1s linear 3;
+            top : 250px;
+            left : 100px;
+            height : 150px;
+            width : 150px;
+            cursor : wait;
+          }
+    }
+    
+
+
+@keyframes preloader{
+   0%{ 
+        display: flex;
+        background-color: $wight;
+    }
+    99% {
+        height: 100%;
+    }
+   100%{ 
+       height: 0%;
+    }
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);
+     
+    }
+    100% { transform: rotate(360deg);
+     
+    }
+
+}
+
+
+
 
 header{
     width: 100%;
