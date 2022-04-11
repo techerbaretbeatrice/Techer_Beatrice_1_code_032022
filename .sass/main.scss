@@ -632,6 +632,10 @@ footer{
                 flex-direction: row;
                 margin-left: 22px;
                 margin-bottom: 12px;
+                .footer__link{
+                    text-decoration: none;
+                    color: $wight;
+                }
                 .footer__icon{
                     margin-right: 12px;
                 }

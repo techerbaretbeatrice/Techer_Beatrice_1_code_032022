@@ -908,6 +908,10 @@ footer .footer__container .footer__items .footer__item {
   margin-left: 22px;
   margin-bottom: 12px;
 }
+footer .footer__container .footer__items .footer__item .footer__link {
+  text-decoration: none;
+  color: #ffffff;
+}
 footer .footer__container .footer__items .footer__item .footer__icon {
   margin-right: 12px;
 }
