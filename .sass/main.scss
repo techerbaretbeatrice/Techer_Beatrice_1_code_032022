@@ -513,12 +513,29 @@ header{
                         display: flex;
                         flex-direction: row;
                         cursor: pointer;
+                        overflow: hidden;
+                        &:hover {
+                            .entry__description {
+                                animation: check 0.1s 1 forwards;
+                            }
+                            .checkbox i{
+                                animation: checkRotation 0.5s 0.1s 1;
+                            }
+                            .text__setting{
+                                text-overflow: ellipsis;
+                                direction: ltr;
+                                overflow: hidden;
+                                white-space: nowrap;    
+                            }
+                        } 
+                    
                         .entry__description{
                             display: flex;
                             flex-direction: column;
-                            width: 80%;
+                            min-width: 80%;
+                       
                             .text__setting{
-                                font-size: 18px;
+                                font-size: 17px;
                                 font-weight: 500;
                                 margin-bottom: 5px;
                                 margin-left: 15px;
@@ -532,20 +549,32 @@ header{
                               text-overflow: ellipsis;
                               direction: ltr;
                               overflow: hidden;
-                              white-space: nowrap;  
-                              
+                              white-space: nowrap;    
                             }
                            
                           
                         }
                         .entry__price{
-                            width: 20%;
+                            min-width: 20%;
                             display: flex;
                             justify-content: center;
                             align-items: flex-end;
                             margin-bottom: 15px;
-                            font-weight: 500;
-
+                            font-weight: 500;  
+                        }
+                        .checkbox{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            min-width: 20%;
+                            background-color: $tertiary-color;
+                            color: $tertiary-color;
+                            font-size: 25px;
+                            .check--color{
+                                display: block;
+                                background: $wight;
+                                border-radius: 25px;
+                            }
                         }
                     }
                
@@ -575,6 +604,16 @@ header{
 
 }
 
+@keyframes check {
+    0%{min-width: 80%;}
+    100%{min-width: 60%;}    
+}
+
+@keyframes checkRotation {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+    
+}
 
 @keyframes firstInflow{
     0%{
@@ -638,8 +677,10 @@ header{
     width: 100%;
     max-width: 1440px;
     padding-bottom: 53px;
+    font-family: $font-text;
     .btn--size{
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 400;
     }
     
 }
