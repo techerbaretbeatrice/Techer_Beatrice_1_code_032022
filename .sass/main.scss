@@ -100,12 +100,13 @@ body{
     border: none;
     opacity: 0.80;
     cursor: pointer;
+    transition-duration: 0.5s;
 
 }
 
 button{
     &.btn--click:hover{
-            filter: brightness(1.4);
+            filter: brightness(1.25);
             box-shadow: 2px 5px 16px 0px #dad8d8, 5px 5px 15px 5px rgba(0,0,0,0);
             -webkit-box-shadow: 2px 5px 16px 0px #292929, 5px 5px 15px 5px rgba(0,0,0,0);
     }
@@ -466,6 +467,9 @@ header{
             }
         }
         .block__list{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             .block__entries{
                 display: flex;
                 flex-direction: column;
@@ -540,17 +544,57 @@ header{
                             justify-content: center;
                             align-items: flex-end;
                             margin-bottom: 15px;
+                            font-weight: 500;
 
                         }
                     }
                
                 }
             }
+            .entries--firstInflow{
+                animation: firstInflow 1.5s forwards;
+                -moz-animation: firstInflow 1.5s forwards; /* Firefox */
+                -webkit-animation: firstInflow 1.5s forwards; /* Safari et Chrome */
+                -o-animation: firstInflow 1.5s forwards; /* Opera */
+            }
+            .entries--secondInflow{
+                animation: secondInflow 1s;
+                -moz-animation: secondInflow 1s; /* Firefox */
+                -webkit-animation: secondInflow 1s; /* Safari et Chrome */
+                -o-animation: secondInflow 1s; /* Opera */
+            }
+            .entries--thirdInflow{
+                animation: thirdInflow 0.5s;
+                -moz-animation: thirdInflow 0.5s; /* Firefox */
+                -webkit-animation: thirdInflow 0.5s; /* Safari et Chrome */
+                -o-animation: thirdInflow 0.5s; /* Opera */
+            }
         }
         
     }
 
 }
+
+
+@keyframes firstInflow{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{ transform: translateY(0%);}
+}
+@keyframes secondInflow {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{ transform: translateY(0%);}
+}
+@keyframes thirdInflow {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{ transform: translateY(0%);}
+}
+
 .preference__like{
     .preference__empty{
         position: relative;
