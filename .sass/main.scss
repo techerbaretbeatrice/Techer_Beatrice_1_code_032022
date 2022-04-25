@@ -45,12 +45,10 @@ body{
         align-items: center;
 
         .loader {
-            border: 16px solid #f3f3f3; /* Light grey */
-            border-top: 16px solid #9356DC ; /* Blue */
+            border: 16px solid #f3f3f3; 
+            border-top: 16px solid #9356DC;
             border-radius: 50%;
             animation: spin 1s linear 3;
-            top : 250px;
-            left : 100px;
             height : 150px;
             width : 150px;
             cursor : wait;
@@ -61,7 +59,6 @@ body{
 
 @keyframes preloader{
    0%{ 
-        display: flex;
         background-color: $wight;
     }
     99% {
@@ -70,7 +67,6 @@ body{
    100%{ 
        height: 0%;
     }
-
 }
 
 @keyframes spin {
@@ -80,9 +76,7 @@ body{
     100% { transform: rotate(360deg);
      
     }
-
 }
-
 
 .btn{
     width: 220px;
@@ -136,7 +130,7 @@ header{
         height: 65px;
         display: flex;
         align-items: center;
-        padding-left: 40px;
+        padding-left: 25px;
     }
         .header__logo{
             width: 200px;
@@ -197,7 +191,6 @@ header{
     .map--box{
         box-shadow: inset 0px 2px 4px 0px #b6b6b6;
         width: 100%;
-
     }
     
     .container__info{
@@ -222,7 +215,7 @@ header{
                 margin-top: 23px;
                 margin-bottom: 30px;
                 display: flex; 
-                font-size: 17.5px;
+                font-size: 16px;
                 font-weight: 400;
                 opacity: 0.50;
             }
@@ -230,9 +223,7 @@ header{
                 font-size: 26px;
                 width: auto;
             }
-        }
-
-       
+        }   
     }
     
     .container__operations{
@@ -256,7 +247,6 @@ header{
             display: flex;
             flex-wrap: wrap;
            
-        
             .operation__stage{
                 min-width: 330px;
                 width: 100%;
@@ -398,9 +388,7 @@ header{
                     justify-content: center;
                     align-items: center;
                     width: 20%;
-                    font-size: 30px;
-                  
-                  
+                    font-size: 30px;                  
                 }
             }
         }
@@ -489,7 +477,7 @@ header{
                         bottom: 0;
                         transform: translateX(0%) scaleX(1);
                         transform-origin: 0%;
-                        width: 12%;
+                        width: 44px;
                         height: 3px;
                         background-color: $tertiary-color;
                     }
@@ -550,9 +538,7 @@ header{
                               direction: ltr;
                               overflow: hidden;
                               white-space: nowrap;    
-                            }
-                           
-                          
+                            }    
                         }
                         .entry__price{
                             min-width: 20%;
@@ -598,10 +584,8 @@ header{
                 -webkit-animation: thirdInflow 0.5s; /* Safari et Chrome */
                 -o-animation: thirdInflow 0.5s; /* Opera */
             }
-        }
-        
+        }    
     }
-
 }
 
 @keyframes check {
@@ -611,8 +595,7 @@ header{
 
 @keyframes checkRotation {
     0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-    
+    100%{transform: rotate(360deg);}    
 }
 
 @keyframes firstInflow{
@@ -652,8 +635,7 @@ header{
         transition: transform 1s;
         transform-origin: bottom center;
         transform: scale(0);
-        font-size: 31px;
-        
+        font-size: 31px;    
     }
     &:hover{
         .preference__full{
@@ -663,10 +645,7 @@ header{
             -webkit-background-clip:text;
             color:transparent;
         } 
-       
-
     }
-
 }
 
 .btn__box{
@@ -681,8 +660,7 @@ header{
     .btn--size{
         font-size: 16px;
         font-weight: 400;
-    }
-    
+    }    
 }
 
 
@@ -711,7 +689,6 @@ footer{
             display: flex;
             flex-direction: column;
             
-         
             .footer__item{
                 display: flex;
                 flex-direction: row;
@@ -808,8 +785,7 @@ footer{
                 }
             }
         }
-    }
-   
+    }  
 }
 
 @media screen and (min-width : 1024px){
@@ -968,6 +944,4 @@ footer{
             }
         }
     }
-  
-
 }
